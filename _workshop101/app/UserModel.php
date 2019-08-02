@@ -1,0 +1,16 @@
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class UserModel extends Model
+{
+    protected $table = 'user_details';
+    protected $fillable = [
+        'id','name','email','gender'
+    ];
+    protected $hidden = [
+        'password'
+    ];
+}
