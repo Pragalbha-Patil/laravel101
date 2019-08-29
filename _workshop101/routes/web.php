@@ -18,4 +18,5 @@ Route::get('/', function () {
 Route::post('/register', 'registerController@create');
 Route::get('/table', 'registerController@view');
 
-Route::get('user/{id}', 'registerController@edit')->where('id', '[0-9]+');
+Route::get('edit/{id}', 'registerController@edit')->where('id', '[0-9]+');
+Route::get('delete/{id}', 'registerController@delete')->where('id', '[0-9]+');

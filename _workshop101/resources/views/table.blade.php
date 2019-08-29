@@ -50,6 +50,7 @@
                     <hr>
                     <tbody>
                             @foreach ($data as $userdata)
+                            <tr>
                             <td>{{$userdata->name}}</td>
                             <td>{{$userdata->email}}</td>
                             <td>{{$userdata->gender}}</td>
@@ -57,6 +58,7 @@
                             {{-- <form action="/edit"> --}}
                             <td><a title="Edit" data-toggle="tooltip" href="/edit/{{$userdata->id}}"><i class="material-icons">&#xE254;</i></a></td>
                             <td><a title="Delete" data-toggle="tooltip" href="/delete/{{$userdata->id}}"><i class="material-icons">&#xE872;</td>
+                            </tr>
                             @endforeach
                     </tbody>
             </div>

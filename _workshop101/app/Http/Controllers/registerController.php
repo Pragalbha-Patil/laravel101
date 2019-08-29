@@ -35,4 +35,18 @@ class registerController extends Controller
         return view('table')->with('data' , $data);
     }
 
+    public function edit($id) {
+        // dd($id);
+        $user = UserModel::find($id);
+        return view('edittable', compact('user'));
+    }
+
+    public function delete($id) {
+        // dd($id);
+        $user = UserModel::find($id);
+        $user->delete();
+        $data = DB::select('select * from user_details');
+        return view('table')->with('data' , $data);
+    }
+
 }
